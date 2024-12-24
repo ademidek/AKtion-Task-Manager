@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: skyblue;
+}
+
+.icon {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-bottom: 20px; 
+}
+
+/* Icon styling */
+.icon img {
+    width: 150px;
+    margin-right: 20px;
+}
+
+/* Navigation list styling */
+#buttons {
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#buttons li {
+    margin: 0 10px;
+}
+
+#buttons li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: pink;
+    transition: background-color 0.3s;
+}
+
+#buttons li a:hover {
+    background-color: #eee;
+}
+
+.icon, .container {
+    margin-top: 0;
+    padding-top: 0;
+ }
+ 
+
+#icon li a:hover {
+    background-color: #eee;
+}
+
+.task-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px; 
+    font-weight: bold;
+    padding: 0px;
+}
+
+.welcome {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px; 
+    font-weight: bold;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.filter-tasks {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px; 
+    font-weight: bold;
+    padding: 0px;
+}
+
+.add-tasks {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px; 
+    font-weight: bold;
+    padding: 0px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    background-color: pink;      
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: lightpink; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styling for the tags */
+.tag-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 15px; 
+    background-color: skyblue; 
+    color: #333; 
+    text-decoration: none;
+    font-size: 0.8em; 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.tag-button:hover {
+    background-color: #ddd; 
+}
+
+/* Form styles */
+label,
+input[type="text"],
+input[type="date"],
+input[type="radio"],
+textarea,
+select,
+input[type="submit"] {
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+input[type="radio"] {
+    display: inline-block;
+    margin-right: 5px; 
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+form {
+    padding: 20px;
+    border: 1px solid #ccc; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    background-color: pink;
+    max-width: 600px; 
+    margin: 20px auto;
+}

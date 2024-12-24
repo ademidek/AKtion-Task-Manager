@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1 class="welcome">AK's Task Manager</h1>
+</head>
+<body>
+    <div class = "icon">
+    <img src="/img/icon.png" alt="Icon">
+    <ul id="buttons">
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">Add Task</a></li>
+    </ul>
+    </div>
+    {{{body}}}
+    <p class="filter-tasks">Filter Tasks:</p>
+    <form action="/" method="GET">
+    <input type="text" name="titleQ" placeholder="Search by title">
+    <input type="text" name="tagQ" placeholder="Search by tag">
+    <button type="submit">Filter</button>
+    </form>
+    <p class="task-title">My Tasks:</p>
+    <table>
+    <thead>
+        <tr>
+            <th>Pinned</th>
+            <th>Title</th>
+            <th>Priority <a href="/?sort-by=priority&sort-order=asc">⬆️</a> <a href="/?sort-by=priority&sort-order=desc">⬇️</a></th>
+            <th>Due Date <a href="/?sort-by=due-date&sort-order=asc">⬆️</a> <a href="/?sort-by=due-date&sort-order=desc">⬇️</a></th>
+            <th>Tags</th>
+            <th>Progress</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tasks}}
+        <tr>
+            <td>{{#if this.pinned}}📌{{/if}}</td>            
+            <td>{{this.title}}</td>
+            <td>{{this.priority}}</td>
+            <td>{{this.duedate}}</td>
+            <td>
+            {{#each this.tags}}
+                <span class="tag-button">{{this}}</span>
+                {{/each}}
+            </td>
+            <td>{{this.progress}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</body>
+</html>

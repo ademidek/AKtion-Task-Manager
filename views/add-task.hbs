@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type ="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class = "icon">
+    <img src="/img/icon.png" alt="Icon">
+    <ul id="buttons">
+        <li><a href="/">Home</a></li>
+        <li><a href="/add">Add Task</a></li>
+    </ul>
+    </div>
+    {{{body}}}
+    <p class="add-tasks">Enter Task Details:</p>
+    <form action="/add" method="POST">
+        <!-- Title -->
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        
+        <!-- Description -->
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+        
+        <!-- Priority -->
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="1">1 (least urgent)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (most urgent)</option>
+        </select>
+
+        <!-- Due Date -->
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date" name="due-date" required>
+
+        <!-- Pinned -->
+        <label>Pin:</label>
+        <input type="radio" id="pinned-yes" name="pinned" value="yes" required>Yes
+        <input type="radio" id="pinned-no" name="pinned" value="no">No
+        
+        <!-- Tags -->
+        <label for="tags">Tags (separated by ", "):</label>
+        <input type="text" id="tags" name="tags">
+        
+        <!-- Progress -->
+        <label for="progress">Progress:</label>
+        <select id="progress" name="progress" required>
+            <option value="not-started">Not Started</option>
+            <option value="in-progress">In Progress</option>
+            <option value="done">Done</option>
+        </select>
+
+        <input type="submit" value="Add Task">
+    </form>
+
+    <!--... maybe a footer or other common components ...-->
+</body>
+</html>
